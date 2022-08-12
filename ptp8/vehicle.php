@@ -35,7 +35,7 @@ $oto = new Car('đường bộ', 'CRV', 'Honda', 7, 'đỏ');
 
 class Journeys
 {
-    protected $vehicleJourneys= [];
+    protected $vehicleJourneys;
     protected string $tourJourneys;
     protected int $tourPrice;
 
@@ -52,11 +52,12 @@ class Journeys
     public function hienthidanhsach() {
         echo $this->getTour();
         echo '<br>';
-        foreach($this->vehicleJourneys as $key => $value) {
-            echo $value->run();
-        }
+        // foreach($this->vehicleJourneys as $key => $value) {
+        //     echo $value->run();
+        // }
+        echo $this->vehicleJourneys->run();
     }
 }
-$object = new Journeys([$oto], 'đà nẵng - khánh hòa', 50000);
+$object = new Journeys($oto, 'đà nẵng - khánh hòa', 50000);
 
 echo $object->hienthidanhsach();
