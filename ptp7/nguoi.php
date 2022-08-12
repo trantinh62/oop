@@ -1,6 +1,6 @@
 <?php
 include 'vemaybay.php';
-class Nguoi extends VeMayBay
+class Nguoi
 {
     private string $hoTen;
     private string $gioiTinh;
